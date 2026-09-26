@@ -1,9 +1,7 @@
 import ollama
-msgs = [
-    {"role": "system",
-     "content": "Give the answers in simple terms."}
-    
-]
+import streamlit as st
+st.title ("welcome to my ChatBot App!!!")
+msgs = []
 while True:
     question = input("You: ")
     if question.lower() == "exit":
@@ -22,6 +20,3 @@ while True:
 
         
     print("AI:", response["message"]["content"])
-print("....chat History....\n")
-for msg in msgs:
-    print(msg["role"],":",msg["content"])
